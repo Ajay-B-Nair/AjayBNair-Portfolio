@@ -14,9 +14,9 @@ import { CardModule } from 'primeng/card';
 export class HomePageComponent {
   profile = {
     name: 'Ajay B Nair',
-    title: 'Your Professional Title',
-    description: 'A passionate developer creating amazing digital experiences. Welcome to my portfolio where I showcase my skills, projects, and insights.',
-    imageUrl: 'assets/images/profile.jpg' // Add your image to src/assets/images/
+    title: 'Software Engineer',
+    description: 'Welcome to my portfolio! I\'m a software engineer who loves turning ideas into elegant, functional solutions. Explore my journey through code, projects, and technical insights.',
+    imageUrl: 'assets/images/profile.jpg'
   };
 
   navigationItems = [

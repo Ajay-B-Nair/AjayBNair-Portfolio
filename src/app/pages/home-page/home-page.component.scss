@@ -1,40 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
-  background-attachment: fixed;
-  color: #e4e4e7;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  overflow-x: hidden;
-}
-
-// Animated background particles
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(72, 149, 239, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  animation: floating 20s ease-in-out infinite;
-}
-
-@keyframes floating {
-  0%, 100% { transform: translate(0, 0); }
-  33% { transform: translate(30px, -30px); }
-  66% { transform: translate(-20px, 20px); }
-}
-
-// Component Styles (home-page.component.scss)
 .home-container {
   min-height: 100vh;
   padding: 2rem;
@@ -98,12 +61,17 @@ body::before {
 
 .image-container {
   position: relative;
+  width: 300px;
+  height: 300px;
   animation: float 6s ease-in-out infinite;
   
   &::before {
     content: '';
     position: absolute;
-    inset: -4px;
+    top: -8px;
+    left: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
     border-radius: 50%;
     background: linear-gradient(
       45deg,
@@ -342,6 +310,19 @@ body::before {
     padding: 2rem 1.5rem;
   }
   
+  .image-container {
+    width: 200px;
+    height: 200px;
+    
+    &::before {
+      top: -6px;
+      left: -6px;
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      filter: blur(6px);
+    }
+  }
+  
   .profile-image {
     width: 200px;
     height: 200px;
@@ -373,7 +354,17 @@ body::before {
 
 @media (max-width: 480px) {
   .image-container {
+    width: 160px;
+    height: 160px;
     margin-bottom: 2rem;
+    
+    &::before {
+      top: -4px;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      filter: blur(4px);
+    }
   }
   
   .profile-image {

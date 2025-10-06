@@ -4,11 +4,7 @@
     <p-card [style]="{ 'background': 'transparent', 'border': 'none' }">
       <div class="flex flex-column md:flex-row align-items-center gap-6">
         <div class="image-container">
-          <img 
-            [src]="profile.imageUrl" 
-            [alt]="profile.name" 
-            class="profile-image"
-          >
+          <img [src]="profile.imageUrl" [alt]="profile.name" class="profile-image">
         </div>
         <div class="text-content">
           <h1 class="text-4xl font-bold mb-3">{{ profile.name }}</h1>
@@ -22,13 +18,8 @@
   <!-- Navigation -->
   <section class="navigation-section">
     <div class="flex flex-wrap justify-content-center gap-3">
-      <p-button 
-        *ngFor="let item of navigationItems"
-        [label]="item.label"
-        [outlined]="item.label !== 'Blog'"
-        (click)="navigateToSection(item)"
-        [routerLink]="item.route ? item.route : null"
-      ></p-button>
+      <p-button *ngFor="let item of navigationItems" [label]="item.label" [outlined]="item.label !== 'Blog'"
+        (click)="navigateToSection(item)" [routerLink]="item.route ? item.route : null"></p-button>
     </div>
   </section>
 

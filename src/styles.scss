@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.scss */
+/* PrimeNG Theme for v17 */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+/* Your existing global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, #222323 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.main-container {
+  min-height: 100vh;
+}

@@ -1,0 +1,51 @@
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <p-card [style]="{ 'background': 'transparent', 'border': 'none' }">
+      <div class="flex flex-column md:flex-row align-items-center gap-6">
+        <div class="image-container">
+          <img 
+            [src]="profile.imageUrl" 
+            [alt]="profile.name" 
+            class="profile-image"
+          >
+        </div>
+        <div class="text-content">
+          <h1 class="text-4xl font-bold mb-3">{{ profile.name }}</h1>
+          <h2 class="text-2xl text-primary mb-4">{{ profile.title }}</h2>
+          <p class="text-lg line-height-3">{{ profile.description }}</p>
+        </div>
+      </div>
+    </p-card>
+  </section>
+
+  <!-- Navigation -->
+  <section class="navigation-section">
+    <div class="flex flex-wrap justify-content-center gap-3">
+      <p-button 
+        *ngFor="let item of navigationItems"
+        [label]="item.label"
+        [outlined]="item.label !== 'Blog'"
+        (click)="navigateToSection(item)"
+        [routerLink]="item.route ? item.route : null"
+      ></p-button>
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p-card>
+      <p>Your about me content goes here...</p>
+    </p-card>
+  </section>
+
+  <section id="skills" class="content-section">
+    <h2>Skills</h2>
+    <p-card>
+      <p>Your skills content goes here...</p>
+    </p-card>
+  </section>
+
+  <!-- Add other sections similarly -->
+</div>

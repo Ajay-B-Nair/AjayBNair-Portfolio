@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/AjayBNair-Portfolio/browser",
             "baseHref": "/AjayBNair-Portfolio/",
             "index": "src/index.html",
             "browser": "src/main.ts",

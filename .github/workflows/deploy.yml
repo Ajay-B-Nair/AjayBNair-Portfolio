@@ -12,7 +12,7 @@ permissions:
 jobs:
   build-and-deploy:
     environment:
-      name: gh-pages
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
@@ -30,9 +30,6 @@ jobs:
 
       - name: Build
         run: npm run build -- --base-href=/AjayBNair-Portfolio/
-
-      - name: List build directory (for debugging)
-        run: ls -la dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
